@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Sc\GameManager.cs" />
     <Compile Include="Assets\Sc\MapManager.cs" />
+    <Compile Include="Assets\Sc\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
