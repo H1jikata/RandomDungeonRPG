@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float _speed = 5f;
-    [SerializeField] float _upForce = 10f; 
+    [SerializeField] float _upForce = 10f;
+    [SerializeField] bool _flyOn = default;
     Vector3 _dir = default;
 
     Rigidbody _rb;
@@ -13,11 +14,15 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _flyOn = false;
     }
     private void Update()
     {
         PlayerMove();
-        PlayerFly();
+        if(_flyOn == true)
+        {
+            PlayerFly();
+        }
     }
 
     private void FixedUpdate()
@@ -46,5 +51,10 @@ public class PlayerController : MonoBehaviour
         {
             _rb.AddForce(new Vector3(0, _upForce, 0));
         }
+    }
+
+    public void OnBottonOn()
+    {
+        _flyOn = true;
     }
 }
