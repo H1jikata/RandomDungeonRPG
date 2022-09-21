@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Sc\Camera.cs" />
     <Compile Include="Assets\Sc\Encounter.cs" />
+    <Compile Include="Assets\Sc\Fade.cs" />
     <Compile Include="Assets\Sc\GameManager.cs" />
     <Compile Include="Assets\Sc\MapManager.cs" />
     <Compile Include="Assets\Sc\PlayerController.cs" />
