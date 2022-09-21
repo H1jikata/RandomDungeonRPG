@@ -53,6 +53,8 @@
     <UnityVersion>2019.4.24f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Sc\Camera.cs" />
+    <Compile Include="Assets\Sc\Encounter.cs" />
     <Compile Include="Assets\Sc\GameManager.cs" />
     <Compile Include="Assets\Sc\MapManager.cs" />
     <Compile Include="Assets\Sc\PlayerController.cs" />
@@ -620,6 +622,12 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
