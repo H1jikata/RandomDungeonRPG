@@ -64,6 +64,10 @@
     <Compile Include="Assets\Sc\SampleCode.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Resources\TestUnity.txt" />
+    <None Include="Assets\Resources\TestUnity2.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>F:\unity2\2019.3.15f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
