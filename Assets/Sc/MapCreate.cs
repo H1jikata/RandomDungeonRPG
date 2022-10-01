@@ -18,7 +18,7 @@ public class MapCreate : MonoBehaviour
         for(int i = 0; i < line.Length; i++)
         {
             //_splitText[i] = int.Parse(line[i]);
-            Debug.Log(line[i]);
+            //Debug.Log(line[i]);
         }
     }
 
