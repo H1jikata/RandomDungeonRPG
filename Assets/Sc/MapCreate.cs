@@ -20,6 +20,11 @@ public class MapCreate : MonoBehaviour
             //_splitText[i] = int.Parse(line[i]);
             //Debug.Log(line[i]);
         }
+
+        for(int j = 0; j < _splitText.Length; j++)
+        {
+
+        }
     }
 
     // Update is called once per frame
