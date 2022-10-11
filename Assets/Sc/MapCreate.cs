@@ -13,6 +13,7 @@ public class MapCreate : MonoBehaviour
     [SerializeField] string _textFileName = default;
 
     [SerializeField] string _wallNumber = default;
+    [SerializeField] string _roadNumber = default;
     void Start()
     {
         _loadText = (Resources.Load(_textFileName, typeof(TextAsset)) as TextAsset).text;
