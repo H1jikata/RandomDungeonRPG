@@ -14,6 +14,7 @@ public class MapCreate : MonoBehaviour
 
     [SerializeField] string _wallNumber = default;
     [SerializeField] string _roadNumber = default;
+    [SerializeField] string _danDanNumber = default;
     void Start()
     {
         _loadText = (Resources.Load(_textFileName, typeof(TextAsset)) as TextAsset).text;
