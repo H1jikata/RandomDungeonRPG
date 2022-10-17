@@ -35,6 +35,10 @@ public class MapCreate : MonoBehaviour
             {
 
             }
+            else if(_splitText[1] == _roadNumber)
+            {
+
+            }
         }
     }
 
