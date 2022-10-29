@@ -1,28 +1,50 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MapManager : MonoBehaviour
 {
-    [SerializeField] int _sizeX = 10;
-    [SerializeField] int _sizeY = 10;
+    [SerializeField] Text _text = default;
+    //[SerializeField] TextAsset _textAsset = default;
+    [SerializeField] string _loadText = default;
+    [SerializeField] string[] _splitText = default;
 
-    [SerializeField] GameObject _wall = default;
-    [SerializeField] GameObject _playerPrefub = default;
-    [SerializeField] GameObject _playerSpawn = default;
+    [SerializeField] string _textFileName = default;
 
-    private void Awake()
+    [SerializeField] string _wallNumber = default;
+    [SerializeField] string _roadNumber = default;
+    [SerializeField] string _danDanNumber = default;
+    void Start()
     {
-        for (int i = 0; i < _sizeX; i++)
+        _loadText = (Resources.Load(_textFileName, typeof(TextAsset)) as TextAsset).text;
+        string[] line = _loadText.Split(' ');
+        for (int i = 0; i < line.Length; i++)
         {
-            for (int j = 1; j < _sizeY; j++)
-            {
-                Instantiate(_wall, new Vector3(i, 0, j), Quaternion.identity);
-            }
+            //_splitText[i] = int.Parse(line[i]);
+            //Debug.Log(line[i]);
         }
 
-        Instantiate(_playerPrefub, _playerSpawn.transform);
+        for (int j = 0; j < _splitText.Length; j++)
+        {
+            if (_splitText[j] == _wallNumber)
+            {
+
+            }
+            else if (_splitText[j] == _roadNumber)
+            {
+
+            }
+            else if (_splitText[1] == _roadNumber)
+            {
+
+            }
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 }
-
-

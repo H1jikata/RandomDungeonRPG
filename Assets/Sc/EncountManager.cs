@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Encounter : MonoBehaviour
+public class EncountManager : MonoBehaviour
 {
     [SerializeField] int _encountNum = default;
     [SerializeField] int _randNum = default;
