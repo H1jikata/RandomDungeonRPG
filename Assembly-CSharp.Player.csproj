@@ -53,15 +53,15 @@
     <UnityVersion>2019.4.24f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Sc\BattleManager.cs" />
+    <Compile Include="Assets\Sc\Battle\BattleManager.cs" />
     <Compile Include="Assets\Sc\Camera.cs" />
-    <Compile Include="Assets\Sc\Encounter.cs" />
+    <Compile Include="Assets\Sc\EncountManager.cs" />
+    <Compile Include="Assets\Sc\EnemyData.cs" />
     <Compile Include="Assets\Sc\Fade.cs" />
     <Compile Include="Assets\Sc\GameManager.cs" />
-    <Compile Include="Assets\Sc\MapCreate.cs" />
-    <Compile Include="Assets\Sc\MapManager.cs" />
-    <Compile Include="Assets\Sc\PlayerController.cs" />
-    <Compile Include="Assets\Sc\PlayerController2.cs" />
+    <Compile Include="Assets\Sc\Map\MapManager.cs" />
+    <Compile Include="Assets\Sc\Player\PlayerController.cs" />
+    <Compile Include="Assets\Sc\Player\PlayerController2.cs" />
     <Compile Include="Assets\Sc\SampleCode.cs" />
   </ItemGroup>
   <ItemGroup>
