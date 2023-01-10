@@ -14,6 +14,8 @@ public class MapManager : MonoBehaviour
     [SerializeField] 
     string _textFileName = default;
 
+    [SerializeField]
+    Vector3 _positionX, _positionY, _positionZ;
     [SerializeField] 
     GameObject _wallPrefub = default;
     [SerializeField] 
