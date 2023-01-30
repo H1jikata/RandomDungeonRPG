@@ -325,7 +325,6 @@ GameObject:
   m_Component:
   - component: {fileID: 818226305}
   - component: {fileID: 818226304}
-  - component: {fileID: 818226306}
   m_Layer: 0
   m_Name: MapCreate
   m_TagString: Untagged
@@ -345,12 +344,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce00650d6821b144faa038ce8fc4d4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sizeX: 40
-  _sizeY: 30
-  _wall: {fileID: 4034763020649973767, guid: 9b3b235d67ae2534891c9ec8e42d1cdf, type: 3}
-  _playerPrefub: {fileID: 6721043944029212174, guid: 14a5a0a0b79c8c247b5be4aae4fa6a78,
+  _mapText: 
+  _splitText: []
+  _textFileName: Book1
+  _positionX: -1
+  _positionY: 0
+  _positionZ: 1
+  _wallPrefub: {fileID: 1463201913013750201, guid: a2e50fa42bfa9e440b8387f791e1e75d,
     type: 3}
-  _playerSpawn: {fileID: 1352809873}
+  _roadPrefub: {fileID: 4034763020649973767, guid: 9b3b235d67ae2534891c9ec8e42d1cdf,
+    type: 3}
 --- !u!4 &818226305
 Transform:
   m_ObjectHideFlags: 0
@@ -365,22 +368,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &818226306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818226303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28446155731655549ad8c847bce3011b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _text: {fileID: 0}
-  _loadText: 
-  _splitText: 
-  _textFileName: TestUnity2
 --- !u!1 &873183874
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,13 +676,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606230735}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.39, y: 3.23, z: -10}
+  m_LocalRotation: {x: 0.1763711, y: -0, z: -0, w: 0.98432374}
+  m_LocalPosition: {x: 2.75, y: 3.23, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20.317001, y: 0, z: 0}
 --- !u!114 &1606230739
 MonoBehaviour:
   m_ObjectHideFlags: 0

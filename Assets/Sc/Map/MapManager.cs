@@ -9,17 +9,17 @@ public class MapManager : MonoBehaviour
     string _mapText = default;
     [SerializeField] 
     string[] _splitText = default;
-    [SerializeField]
-    int _x, _y;
     [SerializeField] 
     string _textFileName = default;
 
     [SerializeField]
-    Vector3 _positionX, _positionY, _positionZ;
+    float _positionX, _positionY, _positionZ;
     [SerializeField] 
     GameObject _wallPrefub = default;
     [SerializeField] 
     GameObject _roadPrefub = default;
+
+    int _x, _y;
     void Start()
     {
         _mapText = (Resources.Load(_textFileName, typeof(TextAsset)) as TextAsset).text;
@@ -31,9 +31,31 @@ public class MapManager : MonoBehaviour
 
         string[,] _map = new string[_x, _y];
 
-        for(int i = 0; i < _y; i++)
+        for(int i = 0; i < _x - 1; i++)
         {
+            string[] _tempWords = _splitText[i].Split(',');
 
+            for(int l = 0; l < _y - 1; l++)
+            {
+                _map[i, l] = _tempWords[l];
+                if(_map[i, l] != null)
+                {
+                    switch(_map[i, l])
+                    {
+                        case "1":
+                            Instantiate(_wallPrefub, new Vector3(_positionX + l, _positionY, _positionZ - i), Quaternion.identity);
+                            break;
+
+                        case "2":
+                            Instantiate(_roadPrefub, new Vector3(_positionX + l, _positionY, _positionZ - i), Quaternion.identity);
+                            break;
+
+                        case "3":
+                            Instantiate(_roadPrefub, new Vector3(_positionX + l, _positionY, _positionZ - i), Quaternion.identity);
+                            break;
+                    }
+                }
+            }
         }
     }
 }
