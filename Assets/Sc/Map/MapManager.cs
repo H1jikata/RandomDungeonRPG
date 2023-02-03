@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class MapManager : MonoBehaviour
 {
     [SerializeField] 
-    string _mapText = default;
-    [SerializeField] 
     string[] _splitText = default;
     [SerializeField] 
     string _textFileName = default;
@@ -19,6 +17,9 @@ public class MapManager : MonoBehaviour
     [SerializeField] 
     GameObject _roadPrefub = default;
 
+    /// <summary>読み込んだマップのテキストの保存</summary>
+    string _mapText;
+    /// <summary></summary>
     int _x, _y;
     void Start()
     {
