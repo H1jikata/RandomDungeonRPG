@@ -34,6 +34,8 @@ public class CharacterStatus : MonoBehaviour
     {
         LevelUP(2);
     }
+    /// <summary>レベルアップが可能か判断する</summary>
+    /// <param name="n">敵を倒した時に入手する経験値</param>
     void LevelUP(int n)
     {
         _currentEXP += n;
