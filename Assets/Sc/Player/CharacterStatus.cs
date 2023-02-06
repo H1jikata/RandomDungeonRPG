@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterStatus : MonoBehaviour
 {
     [SerializeField, Tooltip("経験値テーブルの名前")]
-    string _levelupTabelFileName;
+    string _levelupTabelFileName = "";
     [SerializeField, Tooltip("ステータスのテキストの名前")]
     string _statusTextName;
     [SerializeField, Tooltip("ScriptableObjectの名前")]
@@ -40,7 +40,11 @@ public class CharacterStatus : MonoBehaviour
             _dataName._def[i] = int.Parse(_statusDatas[4]);
             _dataName._speed[i] = int.Parse(_statusDatas[5]);
         }
-        CurrentStatus();
+        if(_levelupTabelFileName != "")
+        {
+            Debug.Log("q");
+            CurrentStatus();
+        }
     }
 
     void CurrentStatus()
