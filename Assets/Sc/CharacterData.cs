@@ -5,18 +5,16 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObeject/CharacterData")]
 public class CharacterData : ScriptableObject
 {
-    [SerializeField, Header("名前")]
-    string _name = default;
     [SerializeField, Header("レベル")]
-    int _exp = default;
+    public int[] _exp = default;
     [SerializeField, Header("HP")]
-    int _hp = default;
+    public int[] _hp = default;
     [SerializeField, Header("MP")]
-    int _mp = default;
+    public int[] _mp = default;
     [SerializeField, Header("攻撃力")]
-    int _str = default;
+    public int[] _str = default;
     [SerializeField, Header("防御力")]
-    int _def = default;
+    public int[] _def = default;
     [SerializeField, Header("速さ")]
-    int _speed = default;
+    public int[] _speed = default;
 }
