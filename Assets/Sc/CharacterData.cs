@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterData : ScriptableObject
 {
     [SerializeField, Header("レベル")]
-    public int[] _exp = default;
+    public int[] _level = default;
     [SerializeField, Header("HP")]
     public int[] _hp = default;
     [SerializeField, Header("MP")]

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterStatus : MonoBehaviour
+public class PlayerStatus : MonoBehaviour
 {
     [SerializeField, Tooltip("経験値テーブルの名前")]
     string _levelupTabelFileName = "";
@@ -11,6 +11,7 @@ public class CharacterStatus : MonoBehaviour
     [SerializeField, Tooltip("ScriptableObjectの名前")]
     CharacterData _dataName;
 
+    DataBase _playerDataBase = new DataBase();
     /// <summary>読み込んだテキストを保存しておく変数</summary>
     string _levelupText;
     string _statusData;
@@ -30,21 +31,25 @@ public class CharacterStatus : MonoBehaviour
 
         _splitStatusupText = _statusData.Split('\n');
 
-        for(int i = 0; i < _splitStatusupText.Length - 2; i++)
+       /* for(int i = 0; i < _splitStatusupText.Length - 2; i++)
         {
-            _statusDatas = _splitStatusupText[i + 1].Split(',');
-            _dataName._exp[i] = int.Parse(_statusDatas[0]);
+            
+            _dataName._level[i] = int.Parse(_statusDatas[0]);
             _dataName._hp[i] = int.Parse(_statusDatas[1]);
             _dataName._mp[i] = int.Parse(_statusDatas[2]);
             _dataName._str[i] = int.Parse(_statusDatas[3]);
             _dataName._def[i] = int.Parse(_statusDatas[4]);
             _dataName._speed[i] = int.Parse(_statusDatas[5]);
-        }
-        if(_levelupTabelFileName != "")
-        {
-            Debug.Log("q");
-            CurrentStatus();
-        }
+        }*/
+        _statusDatas = _splitStatusupText[1].Split(',');
+        _playerDataBase.Level = int.Parse(_statusDatas[0]);
+        _playerDataBase.HP = int.Parse(_statusDatas[1]);
+        _playerDataBase.MP = int.Parse(_statusDatas[2]);
+        _playerDataBase.STR = int.Parse(_statusDatas[3]);
+        _playerDataBase.DEF = int.Parse(_statusDatas[4]);
+        _playerDataBase.Speed = int.Parse(_statusDatas[5]);
+
+        CurrentStatus();
     }
 
     void CurrentStatus()
@@ -53,8 +58,6 @@ public class CharacterStatus : MonoBehaviour
 
         _splitLevelupText = _levelupText.Split('\n');
         _currentLevel = _splitLevelupText[1].Split(',');
-
-        checkStatus();
 
         _nextLevelEXP = _splitLevelupText[int.Parse(_currentLevel[0]) + 1].Split(',');
 
@@ -86,12 +89,28 @@ public class CharacterStatus : MonoBehaviour
     /// <summary>現在のステータスを確認する（デバッグ用)</summary>
     void checkStatus()
     {
-        Debug.Log("現在のPlayerLevelは" + _currentLevel[0] + "です");
+
+        _statusDatas = _splitStatusupText[_playerDataBase.Level + 1].Split(',');
+        _playerDataBase.Level = int.Parse(_statusDatas[0]);
+        _playerDataBase.HP = int.Parse(_statusDatas[1]);
+        _playerDataBase.MP = int.Parse(_statusDatas[2]);
+        _playerDataBase.STR = int.Parse(_statusDatas[3]);
+        _playerDataBase.DEF = int.Parse(_statusDatas[4]);
+        _playerDataBase.Speed = int.Parse(_statusDatas[5]);
+
+        Debug.Log("現在のPlayerLevelは" + _playerDataBase.Level + "です");
+        Debug.Log("現在のPlayerのHPは" + _playerDataBase.HP);
+        Debug.Log("現在のPlayerのMPは" + _playerDataBase.MP);
+        Debug.Log("現在のPlayerの力は" + _playerDataBase.STR);
+        Debug.Log("現在のPlayerの防御力は" + _playerDataBase.DEF);
+        Debug.Log("現在のPlayerの素早さは" + _playerDataBase.Speed);
+
+        /*Debug.Log("現在のPlayerLevelは" + _currentLevel[0] + "です");
         Debug.Log("現在のPlayerのHPは" + _dataName._hp[int.Parse(_currentLevel[0]) - 1]);
         Debug.Log("現在のPlayerのMPは" + _dataName._mp[int.Parse(_currentLevel[0]) - 1]);
         Debug.Log("現在のPlayerの力は" + _dataName._str[int.Parse(_currentLevel[0]) - 1]);
         Debug.Log("現在のPlayerの防御力は" + _dataName._def[int.Parse(_currentLevel[0]) - 1]);
-        Debug.Log("現在のPlayerの素早さは" + _dataName._speed[int.Parse(_currentLevel[0]) - 1]);
+        Debug.Log("現在のPlayerの素早さは" + _dataName._speed[int.Parse(_currentLevel[0]) - 1]);*/
     }
 
     public void test()
