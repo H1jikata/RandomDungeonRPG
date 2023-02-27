@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -111,10 +112,20 @@ public class PlayerStatus : MonoBehaviour
         Debug.Log("現在のPlayerの素早さは" + _dataName._speed[int.Parse(_currentLevel[0]) - 1]);*/
     }
 
-    public void test()
+    public void takehp(int hp)
     {
-        LevelUP(2);
+        _playerDataBase.HP = hp;
+
+        if (_playerDataBase.HP <= 0)
+        {
+            Debug.Log("playerが倒れてしまった");
+        }
     }
 
     public int PlayerLevel { get => _playerDataBase.Level; set => _playerDataBase.Level = value; }
+    public int PlayerHP { get => _playerDataBase.HP; set => _playerDataBase.HP = value; }
+    public int PlayerMP { get => _playerDataBase.MP; set => _playerDataBase.MP = value; }
+    public int PlayerSTR { get => _playerDataBase.STR; set => _playerDataBase.STR = value; }
+    public int PlayerDEF { get => _playerDataBase.DEF; set => _playerDataBase.DEF = value; }
+    public int PlayerSpeed { get => _playerDataBase.Speed; set => _playerDataBase.Speed = value; }
 }
