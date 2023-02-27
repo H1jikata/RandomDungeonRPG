@@ -8,8 +8,6 @@ public class PlayerStatus : MonoBehaviour
     string _levelupTabelFileName = "";
     [SerializeField, Tooltip("ステータスのテキストの名前")]
     string _statusTextName;
-    [SerializeField, Tooltip("ScriptableObjectの名前")]
-    CharacterData _dataName;
 
     DataBase _playerDataBase = new DataBase();
     /// <summary>読み込んだテキストを保存しておく変数</summary>
@@ -117,4 +115,6 @@ public class PlayerStatus : MonoBehaviour
     {
         LevelUP(2);
     }
+
+    public int PlayerLevel { get => _playerDataBase.Level; set => _playerDataBase.Level = value; }
 }

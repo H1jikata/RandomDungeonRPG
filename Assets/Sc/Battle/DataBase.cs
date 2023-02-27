@@ -21,8 +21,6 @@ public class DataBase
     public int HP { get => _hp; set => _hp = value; }
     public int MP { get => _mp; set => _mp = value; }
     public int STR { get => _str; set => _str = value; }
-
     public int DEF { get => _def; set => _def = value; }
-
     public int Speed { get => _speed; set => _speed = value; }
 }
