@@ -53,20 +53,20 @@
     <UnityVersion>2019.4.24f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Sc\Battle\AttackManager.cs" />
     <Compile Include="Assets\Sc\Battle\BattleManager.cs" />
+    <Compile Include="Assets\Sc\Battle\DataBase.cs" />
+    <Compile Include="Assets\Sc\Battle\EnemyStatus.cs" />
+    <Compile Include="Assets\Sc\Battle\IDamage.cs" />
     <Compile Include="Assets\Sc\Camera.cs" />
+    <Compile Include="Assets\Sc\CharacterData.cs" />
     <Compile Include="Assets\Sc\EncountManager.cs" />
-    <Compile Include="Assets\Sc\EnemyData.cs" />
     <Compile Include="Assets\Sc\Fade.cs" />
     <Compile Include="Assets\Sc\GameManager.cs" />
     <Compile Include="Assets\Sc\Map\MapManager.cs" />
     <Compile Include="Assets\Sc\Player\PlayerController.cs" />
     <Compile Include="Assets\Sc\Player\PlayerController2.cs" />
-    <Compile Include="Assets\Sc\SampleCode.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Resources\TestUnity.txt" />
-    <None Include="Assets\Resources\TestUnity2.txt" />
+    <Compile Include="Assets\Sc\Player\PlayerStatus.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

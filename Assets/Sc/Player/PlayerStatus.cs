@@ -24,7 +24,7 @@ public class PlayerStatus : MonoBehaviour
     /// <summary>次のレベルとあがるための経験値量と各ステータスを保存する</summary>
     string[] _nextLevelEXP;
     string[]_statusDatas;
-    private void Start()
+    private void Awake()
     {
         _statusData = (Resources.Load(_statusTextName, typeof(TextAsset)) as TextAsset).text;
 
@@ -103,13 +103,6 @@ public class PlayerStatus : MonoBehaviour
         Debug.Log("現在のPlayerの力は" + _playerDataBase.STR);
         Debug.Log("現在のPlayerの防御力は" + _playerDataBase.DEF);
         Debug.Log("現在のPlayerの素早さは" + _playerDataBase.Speed);
-
-        /*Debug.Log("現在のPlayerLevelは" + _currentLevel[0] + "です");
-        Debug.Log("現在のPlayerのHPは" + _dataName._hp[int.Parse(_currentLevel[0]) - 1]);
-        Debug.Log("現在のPlayerのMPは" + _dataName._mp[int.Parse(_currentLevel[0]) - 1]);
-        Debug.Log("現在のPlayerの力は" + _dataName._str[int.Parse(_currentLevel[0]) - 1]);
-        Debug.Log("現在のPlayerの防御力は" + _dataName._def[int.Parse(_currentLevel[0]) - 1]);
-        Debug.Log("現在のPlayerの素早さは" + _dataName._speed[int.Parse(_currentLevel[0]) - 1]);*/
     }
 
     public void takehp(int hp)
